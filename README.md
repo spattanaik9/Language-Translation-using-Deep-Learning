@@ -1,2 +1,12 @@
 # Language-Translation-using-Deep-Learning
 This project demonstrates the implementation of a language translation system powered by deep learning techniques and TensorFlow. The primary objective is to build a neural machine translation model that can efficiently translate text from one language to another, making it a valuable tool for cross-lingual communication and content localization
+
+Project Description:
+This project is on machine translation for two "artificial" languages: an "Input Language" and an "Output Language". We want to build a model to translate the texts in the "Input Language" to texts in the "Output Language". For example, a text in the "Input Language" can be "a g b f a f a e a k a j c f b f c d a k a k c e b g a h a k b d b f b f b d c d " , and its translation to the "Output Language" is "b f c f b f c d a j e f g c e b g a k i j b d b f a k l m b f b d a h ed ee ef a k k eg a k h eh a e ei c d a f ej ek a g d el".
+
+As a training dataset, a list of 5,000 texts in the Input Language are here, and the corresponding list of 5,000 texts in the Output Language are here. (After downloading them, you can use pickle.load(open(path,'rb')) to open them. They are two lists of strings in Python.)
+
+Your task is to design and train a good model, which can take texts in the "Input language" as its input, translate them to the corresponding texts in the "Output Language" and output them. (Note: the final output of your code should not include extra tokens such as [start] or [end]. So if your model's output includes such extra tokens, you need to write a few more lines of code to remove them.)
+
+Your trained model will be evaluated using a testing set (which is shown below, and is similar to the above training set). Its performance will be measured by its "accuracy for words", defined as follows. Given a text, a word is a continuous sequence of letters separated by space in the text. (For example, the text "b f c ej ek d el" has 7 words: "b", "f", "c", "ej", "ek", "d" and "el".) "Accuracy" is defined as the fraction of words in the ground-truth text (in the Output Language) that are shown correctly in your model's output. (For example, if the ground-truth text is "b f c ej ek d el" and your model's output is "b c el", then your result has 1 correct word and 6 mistaken words (since the ground-truth text has 7 words in total). If your model's output is "b c el ej ek a b c d f g", then your result has 3 correct words and 4 mistaken words.)
+
